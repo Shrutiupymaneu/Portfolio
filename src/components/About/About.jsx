@@ -1,30 +1,25 @@
 import React from "react";
-import { Typewriter } from "react-simple-typewriter"; // Typewriter effect for dynamic typing
-import Tilt from "react-parallax-tilt"; // Tilt effect for image
-import HeroImage from "../../assets/HeroImage.png"; // Import your image
+import { Typewriter } from "react-simple-typewriter"; // Typewriter effect
+import Tilt from "react-parallax-tilt"; // Tilt effect
+import HeroImage from "../../assets/HeroImage.png"; // Profile Image
 
 function About() {
   return (
-    // Main section with minimal horizontal padding
     <section
       id="about"
       className="py-20 px-4 sm:px-8 md:px-12 font-sans mt-16 md:mt-24 lg:mt-32 text-white"
     >
-      {/* Flex container for layout: text on left, image on right (on desktop) */}
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
-        {/* Left side: Text content */}
+        {/* Text Content */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          {/* Heading */}
           <h1 className="text-3xl sm:text-5xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
           </h1>
 
-          {/* Name */}
           <h2 className="text-4xl sm:text-6xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Shruti Dubey
           </h2>
 
-          {/* Dynamic typing title */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#8245ec] mb-4 leading-tight">
             <span className="text-white">I am a</span>
             <Typewriter
@@ -43,7 +38,6 @@ function About() {
             />
           </h3>
 
-          {/* Short description */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
             I am a passionate software engineer with a strong foundation in web
             development and a keen interest in exploring new technologies. I
@@ -52,7 +46,6 @@ function About() {
             that enhance user experiences and drive positive change.
           </p>
 
-          {/* Resume Button */}
           <a
             href="https://drive.google.com/file/d/1ZJcHY0P6_-OmEB31Z3vgqg6rCpdDjaDk/view?usp=sharing"
             target="_blank"
@@ -67,8 +60,8 @@ function About() {
           </a>
         </div>
 
-        {/* Right side: Profile image with tilt effect */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
+        {/* Profile Image */}
+        <div className="md:w-1/2 flex justify-center md:justify-end md:-translate-x-6">
           <Tilt
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
@@ -77,7 +70,7 @@ function About() {
             scale={1.05}
             transitionSpeed={1000}
             gyroscope={true}
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] rounded-full border-4 border-purple-700 overflow-hidden"
+            className="w-40 h-40 sm:w-56 sm:h-56 md:w-[20rem] md:h-[20rem] rounded-full border-4 border-purple-700 overflow-hidden"
           >
             <img
               src={HeroImage}
@@ -88,7 +81,7 @@ function About() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default About;
