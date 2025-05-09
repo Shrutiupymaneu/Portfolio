@@ -1,22 +1,22 @@
 import React from "react";
-import { Typewriter } from "react-simple-typewriter"; // Typewriter effect
-import Tilt from "react-parallax-tilt"; // Tilt effect
-import HeroImage from "../../assets/HeroImage.png"; // Profile Image
+import { Typewriter } from "react-simple-typewriter";
+import Tilt from "react-parallax-tilt";
+import HeroImage from "../../assets/HeroImage.png";
 
 function About() {
   return (
     <section
       id="about"
-      className="py-20 px-4 sm:px-8 md:px-12 font-sans mt-16 md:mt-24 lg:mt-32 text-white"
+      className="py-20 px-4 sm:px-8 md:px-12 font-sans mt-24 text-white"
     >
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between md:gap-24">
         {/* Text Content */}
-        <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          <h1 className="text-3xl sm:text-5xl md:text-5xl font-bold text-white mb-2 leading-tight">
+        <div className="md:w-[48%] text-center md:text-left mt-4 md:mt-4 md:pl-12">
+          <h1 className="text-3xl sm:text-5xl md:text-5xl font-bold mb-2 leading-tight">
             Hi, I am
           </h1>
 
-          <h2 className="text-4xl sm:text-6xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <h2 className="text-4xl sm:text-6xl md:text-6xl font-bold mb-4 leading-tight">
             Shruti Dubey
           </h2>
 
@@ -38,7 +38,7 @@ function About() {
             />
           </h3>
 
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-6 leading-relaxed">
             I am a passionate software engineer with a strong foundation in web
             development and a keen interest in exploring new technologies. I
             thrive on challenges and enjoy solving complex problems through
@@ -61,7 +61,7 @@ function About() {
         </div>
 
         {/* Profile Image */}
-        <div className="md:w-1/2 flex justify-center md:justify-end md:-translate-x-6">
+        <div className="md:w-[50%] flex justify-center md:justify-start md:pl-24">
           <Tilt
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
@@ -81,7 +81,7 @@ function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default About;
