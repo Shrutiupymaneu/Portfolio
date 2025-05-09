@@ -109,16 +109,6 @@ export const SkillsInfo = [
     },
     {
       id: 1,
-      title: "Quiz App",    
-      description:
-        "A fun and interactive quiz application that allows users to test their knowledge on various topics. Built using React.js, it features multiple-choice questions, a timer, and a scoring system for an engaging experience.",
-      image: quizAppLogo,
-      tags: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/Shrutiupymaneu/Quiz-App",
-      webapp: "https://quiz-app-seven-omega-26.vercel.app/",
-    },
-    {
-      id: 2,
       title: "Todo List",
       description:
         "A simple and effective to-do list application that helps users manage their tasks efficiently. Built using React.js, it features task creation, editing, and deletion functionalities for a seamless user experience.",
@@ -128,7 +118,7 @@ export const SkillsInfo = [
       webapp: "https://to-do-list-swart-iota.vercel.app/",
     },
     {
-      id: 3,
+      id: 2,
       title: "Weather App",
       description:
         "A weather application that provides real-time weather updates and forecasts. Built using React.js, it fetches data from external APIs to deliver accurate weather information based on user location.",
