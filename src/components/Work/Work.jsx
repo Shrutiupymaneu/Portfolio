@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../../constents";
 
 const Work = () => {
@@ -11,6 +11,19 @@ const Work = () => {
   const handleCloseModal = () => {
     setSelectedProject(null);
   };
+
+  // Prevent background scroll when modal is open
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedProject]);
 
   return (
     <section
@@ -64,66 +77,72 @@ const Work = () => {
         ))}
       </div>
 
-      {/* Modal Section */}
+      {/* Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-start justify-center p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl w-full max-w-3xl relative max-h-[90vh] overflow-y-auto">
-            {/* Close Button */}
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-purple-500 z-10"
-            >
-              &times;
-            </button>
+        <>
+          {/* Backdrop */}
+          <div className="fixed inset-0 z-40 bg-black bg-opacity-80" />
 
-            {/* Modal Content */}
-            <div className="flex flex-col lg:p-8 p-4">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full object-contain rounded-xl mb-6"
-              />
+          {/* Modal Container */}
+          <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto">
+            <div className="relative w-full max-w-3xl bg-gray-900 rounded-xl shadow-2xl mt-10">
+              {/* Close Button */}
+              <button
+                onClick={handleCloseModal}
+                className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-purple-500 z-50"
+              >
+                &times;
+              </button>
 
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-                {selectedProject.title}
-              </h3>
+              {/* Modal Content */}
+              <div className="max-h-[90vh] overflow-y-auto p-4 lg:p-8">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full object-contain rounded-xl mb-6"
+                />
 
-              <p className="text-gray-400 mb-6 text-sm lg:text-base">
-                {selectedProject.description}
-              </p>
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                  {selectedProject.title}
+                </h3>
 
-              <div className="flex flex-wrap gap-2 mb-6">
-                {selectedProject.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
+                <p className="text-gray-400 mb-6 text-sm lg:text-base">
+                  {selectedProject.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {selectedProject.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-400 px-4 py-2 rounded-xl text-center font-semibold text-sm lg:text-base"
                   >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-1/2 bg-gray-800 hover:bg-purple-800 text-gray-400 px-4 py-2 rounded-xl text-center font-semibold text-sm lg:text-base"
-                >
-                  View Code
-                </a>
-                <a
-                  href={selectedProject.webapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-1/2 bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded-xl text-center font-semibold text-sm lg:text-base"
-                >
-                  View Live
-                </a>
+                    View Code
+                  </a>
+                  <a
+                    href={selectedProject.webapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-1/2 bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded-xl text-center font-semibold text-sm lg:text-base"
+                  >
+                    View Live
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </section>
   );

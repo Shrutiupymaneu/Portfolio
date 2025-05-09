@@ -8,7 +8,7 @@ function About() {
     // Main section with minimal horizontal padding
     <section
       id="about"
-      className="py-4 px-4 sm:px-8 md:px-12 font-sans mt-16 md:mt-24 lg:mt-32 text-white"
+      className="py-20 px-4 sm:px-8 md:px-12 font-sans mt-16 md:mt-24 lg:mt-32 text-white"
     >
       {/* Flex container for layout: text on left, image on right (on desktop) */}
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
