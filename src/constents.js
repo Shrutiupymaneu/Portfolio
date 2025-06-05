@@ -29,6 +29,7 @@ import pasteAppLogo from './assets/work_logo/paste-app.png';
 import quizAppLogo from './assets/work_logo/quiz-app.png';
 import todoListLogo from './assets/work_logo/to-do-list.png';
 import weatherAppLogo from './assets/work_logo/weather-app.png';
+import reactifyLogo from './assets/work_logo/rectify-app.png';
 
 
 export const SkillsInfo = [
@@ -109,22 +110,22 @@ export const SkillsInfo = [
     },
     {
       id: 1,
-      title: "Todo List",
+      title: "Quiz App",
       description:
-        "A simple and effective to-do list application that helps users manage their tasks efficiently. Built using React.js, it features task creation, editing, and deletion functionalities for a seamless user experience.",
-     image: todoListLogo,
+        "An interactive quiz application featuring multiple-choice questions. Built using vanilla JavaScript with dynamic DOM rendering and responsive layout.",
+      image: quizAppLogo,
       tags: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/Shrutiupymaneu/To-Do-List",
-      webapp: "https://to-do-list-swart-iota.vercel.app/",
+      github: "https://github.com/Shrutiupymaneu/Quiz-App",
+      webapp: "https://quiz-app-seven-omega-26.vercel.app/",
     },
     {
       id: 2,
-      title: "Weather App",
+      title: "Reactify",
       description:
-        "A weather application that provides real-time weather updates and forecasts. Built using React.js, it fetches data from external APIs to deliver accurate weather information based on user location.",
-      image: weatherAppLogo,
-      tags: ["HTML", "CSS", "JavaScript", "API"],
-      github: "https://github.com/Shrutiupymaneu/Weather-App",
-      webapp: "https://weather-app-seven-alpha-28.vercel.app/",
+        "Accordion component app built to practice reusable UI components and core React concepts like props, state, and conditional rendering.",
+      image: reactifyLogo,
+      tags: ["React", "JavaScript", "CSS"],
+      github: "https://github.com/Shrutiupymaneu/Accordion-Wrapper",
+      webapp: "https://accordion-wrapper.vercel.app/",
     },
   ];  
