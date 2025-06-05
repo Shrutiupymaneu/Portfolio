@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaCode } from "react-icons/fa";
+import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import logo from "/src/assets/shruti_dubey_logo_no_bg.png";
 
 const Navbar = () => {
@@ -116,6 +117,22 @@ const Navbar = () => {
             className="text-gray-300 hover:text-[#8245ec] transition"
           >
             <FaTwitter size={24} />
+          </a>
+          <a
+            href="https://leetcode.com/u/shuruupmaneu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#8245ec] transition"
+          >
+            <SiLeetcode size={24} />
+          </a>
+          <a
+            href="https://www.geeksforgeeks.org/user/shuruupmaneu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#8245ec] transition"
+          >
+            <SiGeeksforgeeks size={24} />
           </a>
         </div>
 
