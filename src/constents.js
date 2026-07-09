@@ -19,6 +19,7 @@ import vscodeLogo from './assets/tech_logo/vscode.png';
 import figmaLogo from './assets/tech_logo/figma.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 
+
 // Education Section Logo's
 import gcetLogo from './assets/education_logo/galgotia_logo.jpeg';
 import vsicsLogo from './assets/education_logo/vsics.png';
@@ -30,7 +31,10 @@ import quizAppLogo from './assets/work_logo/quiz-app.png';
 import todoListLogo from './assets/work_logo/to-do-list.png';
 import weatherAppLogo from './assets/work_logo/weather-app.png';
 import reactifyLogo from './assets/work_logo/rectify-app.png';
-
+import sortingVisualLogo from "./assets/work_logo/sortingVisualLogo.png";
+import searchingVisualLogo from "./assets/work_logo/searchingVisualLogo.png";
+import resumeAnalyzerLogo from "./assets/work_logo/resumeAnalyzerLogo.png";
+import aiInterviewLogo from "./assets/work_logo/aiInterviewLogo.png";
 
 export const SkillsInfo = [
   {
@@ -70,7 +74,6 @@ export const SkillsInfo = [
       { name: 'GitHub', logo: githubLogo },
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Vercel', logo: vercelLogo },
-      { name: 'Figma', logo: figmaLogo },
     ],
   },
 ];
@@ -81,9 +84,9 @@ export const SkillsInfo = [
       id: 0,
       img: gcetLogo,
       school: "Galgotias College of Engineering and Technology, Greater Noida",
-      date: "Out 2023 - Present",
-      grade: "8.6 CGPA",
-      desc: "I am pursuing my Master's degree (MCA) in Computer Applications from Galgotias College of Engineering & Technology, Greater Noida. During my time at GCET, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Computer Networking, Database Management Systems, Web Development, and Software Engineering. My experience at Galgotias College has been instrumental in shaping my technical abilities and professional growth.",
+      date: "Out 2023 - Aug 2025",
+      grade: "8.8 CGPA",
+      desc: "I have completed Master's degree (MCA) in Computer Applications from Galgotias College of Engineering & Technology, Greater Noida. During my time at GCET, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Computer Networking, Database Management Systems, Web Development, and Software Engineering. My experience at Galgotias College has been instrumental in shaping my technical abilities and professional growth.",
       degree: "Master of Computer Applications - MCA",
     },
     {
@@ -91,41 +94,51 @@ export const SkillsInfo = [
       img: vsicsLogo,
       school: "Dr. Virendra Swarup Institute of Computer Science, Kanpur",
       date: "Aug 2021 - July 2023",
-      grade: "77.02%",
-      desc: "I completed my Bachelor's degree in Computer Science (B.Sc.) from Virendra Swaroop College, Kanpur. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at Virendra Swaroop College allowed me to work on projects that applied theoretical concepts to real-world problems.",
+      grade: "8.1 CGPA",
+      desc: "I have completed Bachelor's degree in Computer Science (B.Sc.) from Virendra Swaroop College, Kanpur. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at Virendra Swaroop College allowed me to work on projects that applied theoretical concepts to real-world problems.",
       degree: "Bachelor of Computer Application - BCA",
     },
   ];
   
   export const projects = [
     {
-      id: 0,
-      title: "Paste App",
-      description:
-        "A simple and efficient pastebin application that allows users to store and share text snippets. Built using React.js, it offers a user-friendly interface for easy pasting and sharing of code snippets or notes.",
-       image: pasteAppLogo,
-      tags: ["HTML", "CSS", "JavaScript", "React JS"],
-      github: "https://github.com/Shrutiupymaneu/PasteApp",
-      webapp: "https://paste-app-tau-ruddy.vercel.app/",
-    },
-    {
-      id: 1,
-      title: "Quiz App",
-      description:
-        "An interactive quiz application featuring multiple-choice questions. Built using vanilla JavaScript with dynamic DOM rendering and responsive layout.",
-      image: quizAppLogo,
-      tags: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/Shrutiupymaneu/Quiz-App",
-      webapp: "https://quiz-app-seven-omega-26.vercel.app/",
-    },
-    {
-      id: 2,
-      title: "Reactify",
-      description:
-        "Accordion component app built to practice reusable UI components and core React concepts like props, state, and conditional rendering.",
-      image: reactifyLogo,
-      tags: ["React", "JavaScript", "CSS"],
-      github: "https://github.com/Shrutiupymaneu/Accordion-Wrapper",
-      webapp: "https://accordion-wrapper.vercel.app/",
-    },
+  id: 0,
+  title: "Sorting Visualizer",
+  description:
+    "An interactive sorting algorithm visualizer that demonstrates how different sorting techniques work step by step. Built using HTML, CSS, and JavaScript with dynamic animations to help users understand algorithms visually.",
+  image: sortingVisualLogo,
+  tags: ["HTML", "CSS", "JavaScript", "DSA"],
+  github: "https://github.com/Shrutiupymaneu/Sorting_Visual",
+  webapp: "https://sorting-visual-phi.vercel.app/",
+},
+{
+  id: 1,
+  title: "Searching Visualizer",
+  description:
+    "A searching algorithm visualizer that helps users understand Linear Search and Binary Search through step-by-step animations. It includes an interactive interface for selecting algorithms, entering values, and visualizing the search process.",
+  image: searchingVisualLogo,
+  tags: ["HTML", "CSS", "JavaScript", "DSA"],
+  github: "https://github.com/Shrutiupymaneu/Searching_Visual",
+  webapp: "https://searching-visual.vercel.app/",
+},
+{
+  id: 2,
+  title: "AI Resume Analyzer",
+  description:
+    "An AI-based resume analyzer web application that reviews resumes and provides useful feedback based on skills, keywords, and job relevance. Built using React.js and Node.js with file upload functionality for analyzing resume content.",
+  image: resumeAnalyzerLogo,
+  tags: ["React JS", "Node JS", "Express JS", "JavaScript"],
+  github: "https://github.com/Shrutiupymaneu/Resume_Analyzer",
+  webapp: "https://resume-analyzer-lovat-tau.vercel.app/",
+},
+{
+  id: 3,
+  title: "AI Interview Question Generator",
+  description:
+    "An AI-powered interview question generator that creates role-based interview questions to help users prepare for technical and HR interviews. Built with a clean and responsive interface for easy practice and preparation.",
+  image: aiInterviewLogo,
+  tags: ["React JS", "JavaScript", "AI", "Web App"],
+  github: "https://github.com/Shrutiupymaneu/AI_Interview_question_generator",
+  webapp: "https://ai-interview-question-generator-opal.vercel.app/",
+},
   ];  
